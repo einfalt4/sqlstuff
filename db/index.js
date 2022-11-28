@@ -9,13 +9,19 @@ class DB {
 
     viewAllEmployees() {
         return this.db.promise().query(
-            "SELECT * FROM employees"
+            "SELECT * FROM employee"
         )
     }
     
     viewAllDepartments() {
         return this.db.promise().query(
-            "SELECT * FROM departments"
+            "SELECT * FROM department"
+        )
+    }
+
+    viewAllRoles() {
+        return this.db.promise().query(
+            "SELECT * FROM role"
         )
     }
 
@@ -25,3 +31,5 @@ class DB {
         )
     }
 }
+
+module.exports = new DB(db);
